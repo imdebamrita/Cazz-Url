@@ -1,7 +1,6 @@
 
 import LinkTable from "@/components/links/LinkTable";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 
 const Dashboard = () => {

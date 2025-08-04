@@ -43,11 +43,15 @@ export default function CreateLink() {
 
     const onSubmit = async (data: FormData) => {
         try {
-            const res = await createLink(data)
-            toast.success('Link created successfully!')
-            reset()
-        } catch (err: any) {
-            toast.error(err.message || "Something went wrong")
+            await createLink(data);
+            toast.success('Link created successfully!');
+            reset();
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                toast.error(err.message);
+            } else {
+                toast.error("Something went wrong");
+            }
         }
     }
 

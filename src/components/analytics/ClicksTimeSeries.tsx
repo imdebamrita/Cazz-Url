@@ -24,6 +24,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import { ClickType } from "@/lib/models/Click";
 
 
 const chartConfig = {
@@ -41,25 +42,11 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-type Click = {
-    timestamp: Date | string;
-    deviceType: string;
-    userAgent: string;
-    country: string;
-    city: string;
-    isp: string;
-    timezone: string;
-    latitude: number | null;
-    longitude: number | null;
-    region: string;
-    referer: string;
-};
-
-function getClicksTimeSeriesData(clicks: Click[], timeRange: "7d" | "30d" | "90d") {
+function getClicksTimeSeriesData(clicks: ClickType[], timeRange: "7d" | "30d" | "90d") {
     // console.log(clicks)
 
     const counts: Record<string, { desktop: number; mobile: number; other: number }> = {};
-    (clicks ?? []).filter(Boolean).forEach((click: Click) => {
+    (clicks ?? []).filter(Boolean).forEach((click: ClickType) => {
         if (click.timestamp) {
             const date = new Date(click.timestamp);
             if (!isNaN(date.getTime())) {
@@ -102,7 +89,7 @@ function getClicksTimeSeriesData(clicks: Click[], timeRange: "7d" | "30d" | "90d
 
 
 
-const ClicksTimeSeries = ({ clicks }: { clicks: Click[] }) => {
+const ClicksTimeSeries = ({ clicks }: { clicks: ClickType[] }) => {
     const [timeRange, setTimeRange] = React.useState<"7d" | "30d" | "90d">("30d")
     const data = getClicksTimeSeriesData(clicks, timeRange)
 

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 
 function MySeparator({
   className,
-}: React.ComponentProps<any> & {
+}: React.ComponentProps<"div"> & {
 }) {
   return (
     <div className={cn("flex flex-col items-center justify-center px-2", className)}>

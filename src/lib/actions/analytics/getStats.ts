@@ -3,27 +3,14 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { connectDB } from "@/lib/db";
 import Link from "@/lib/models/Link";
-
-type Click = {
-  timestamp: Date | string;
-  deviceType: string;
-  userAgent: string;
-  country: string;
-  city: string;
-  isp: string;
-  timezone: string;
-  latitude: number | null;
-  longitude: number | null;
-  region: string;
-  referer: string;
-};
+import { ClickType } from "@/lib/models/Click";
 
 interface LinkInfo {
   id: string;
   title: string;
   originalUrl: string;
   shortCode: string;
-  clicks: Click[];
+  clicks: ClickType[];
   createdAt: string;
   updatedAt: string;
   userId: string;
@@ -36,11 +23,11 @@ interface LinkInfo {
   };
 }
 
-interface GetLinkInfoResult {
-  success: boolean;
-  data?: LinkInfo;
-  error?: string;
-}
+// interface GetLinkInfoResult {
+//   success: boolean;
+//   data?: LinkInfo;
+//   error?: string;
+// }
 
 // Alternative function to get link info with analytics data
 export async function getLinkInfoWithAnalytics(shortCode: string) {
@@ -131,7 +118,7 @@ export async function getLinkInfoWithAnalytics(shortCode: string) {
         clicksThisWeek: 0,
         clicksThisMonth: link[0].clicks || 0,
       },
-      clicks: (link[0].clicks || []).map((click: Click) => ({
+      clicks: (link[0].clicks || []).map((click: ClickType) => ({
         timestamp:
           click.timestamp instanceof Date
             ? click.timestamp.toISOString()

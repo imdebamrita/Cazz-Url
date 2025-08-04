@@ -20,7 +20,10 @@ export async function deleteLink(linkId: string) {
       message: "Link deleted successfully",
       link: JSON.parse(JSON.stringify(deletedLink)),
     };
-  } catch (error: any) {
-    throw new Error(`Failed to delete link: ${error.message}`);
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(`Failed to delete link: ${error.message}`);
+    }
+    throw new Error("Failed to delete link: Unknown error");
   }
 }

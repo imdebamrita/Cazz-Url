@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Copy, Calendar, Mouse, Globe, BarChart3 } from 'lucide-react'
+import { ExternalLink, Calendar, Mouse, BarChart3 } from 'lucide-react'
 import { StatCard } from '@/components/analytics/StatCard';
 import { LinkInfo } from '@/components/analytics/LinkInfo';
 import { DeviceTypeDistribution } from '@/components/analytics/DeviceTypeDistribution';
@@ -10,33 +10,19 @@ import { GeoMapPlaceholder } from '@/components/analytics/GeoMapPlaceholder';
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { getLinkInfoWithAnalytics } from '@/lib/actions/analytics/getStats'
 import { CopyButton } from '@/components/analytics/CopyButton'
 import ClicksTimeSeries from '@/components/analytics/ClicksTimeSeries'
 import { notFound } from 'next/navigation'
 import { ScrollArea } from '@/components/ui/scroll-area'
-
-type Click = {
-    timestamp: Date | string;
-    deviceType: string;
-    userAgent: string;
-    country: string;
-    city: string;
-    isp: string;
-    timezone: string;
-    latitude: number | null;
-    longitude: number | null;
-    region: string;
-    referer: string;
-};
+import { ClickType } from '@/lib/models/Click';
 
 interface LinkData {
     id: string
     title: string
     originalUrl: string
     shortCode: string
-    clicks: Click[]
+    clicks: ClickType[]
     createdAt: string
     updatedAt: string
 }
@@ -63,11 +49,11 @@ export default async function AnalyticsPage({ params }: { params: Promise<{ 'sho
     };
 
     // Helper functions for analytics
-    const getTop = (arr: any[], key: string, topN = 5) => {
+    const getTop = (arr: ClickType[], key: keyof ClickType, topN = 5) => {
         const counts: Record<string, number> = {};
-        arr.forEach(item => {
-            const val = item[key] || 'Unknown';
-            counts[val] = (counts[val] || 0) + 1;
+        arr.forEach((item: ClickType) => {
+            const val = item[key] ?? 'Unknown';
+            counts[String(val)] = (counts[String(val)] || 0) + 1;
         });
         return Object.entries(counts)
             .sort((a, b) => b[1] - a[1])

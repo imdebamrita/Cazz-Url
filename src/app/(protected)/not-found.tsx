@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
@@ -14,7 +13,7 @@ export default function NotFound() {
                         Link Not Found
                     </h2>
                     <p className="mt-2 text-muted-foreground">
-                        The short link you're looking for doesn't exist or has been removed.
+                        The short link you&apos;re looking for doesn&apos;t exist or has been removed.
                     </p>
                     <div className="mt-8">
                         <Button className='cursor-pointer' variant={"outline"} onClick={() => window.history.back()}>

@@ -1,6 +1,10 @@
 import mongoose, { InferSchemaType } from "mongoose";
 
 const LinkSchema = new mongoose.Schema({
+  _id: {
+    type: String,
+    default: () => new mongoose.Types.ObjectId().toString(), // Use ObjectId as string
+  },
   userId: {
     type: String, // Store Clerk user ID directly
     required: true,

@@ -25,7 +25,10 @@ export async function editLink(
       message: "Link updated successfully",
       link: JSON.parse(JSON.stringify(updatedLink)),
     };
-  } catch (error: any) {
-    throw new Error(`Failed to update link: ${error.message}`);
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(`Failed to delete link: ${error.message}`);
+    }
+    throw new Error("Failed to delete link: Unknown error");
   }
 }

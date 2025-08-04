@@ -1,9 +1,11 @@
 "use client";
 
 import { recordClick } from '@/lib/actions/analytics/recordClick';
+import { LinkType } from '@/lib/models/Link';
+import { IpData } from '@/lib/types/ipData';
 import { useEffect } from 'react'
 
-const Redirect = ({ link, shortCode }: { link: any, shortCode: string }) => {
+const Redirect = ({ link, shortCode }: { link: LinkType, shortCode: string }) => {
 
     useEffect(() => {
         const handleRedirect = async () => {
@@ -14,9 +16,18 @@ const Redirect = ({ link, shortCode }: { link: any, shortCode: string }) => {
 
             try {
                 console.log('shortCode:', shortCode); // ✅ should now be defined
-
                 // if ipapi fetch failed, just go on with the redirect and pass the empty data
-                let data = {};
+                let data: IpData = {
+                    ip: "Unknown",
+                    country_name: "Unknown",
+                    city: "Unknown",
+                    region: "Unknown",
+                    latitude: null,
+                    longitude: null,
+                    timezone: "Unknown",
+                    org: "Unknown",
+                    asn: "Unknown"
+                };
                 try {
                     const res = await fetch('https://ipapi.co/json/');
                     data = await res.json();
@@ -44,7 +55,7 @@ const Redirect = ({ link, shortCode }: { link: any, shortCode: string }) => {
         };
 
         handleRedirect();
-    }, [shortCode]);
+    }, [link, shortCode]);
 
     return (
         null

@@ -1,10 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Mouse, Globe, BarChart3 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 export const StatCard = ({ title, value, icon: Icon, description }: {
     title: string;
     value: string | number;
-    icon: any;
+    icon: React.ElementType;
     description?: string;
 }) => (
     <Card>

@@ -12,7 +12,7 @@ export default function NotFound() {
                         Link Not Found
                     </h2>
                     <p className="mt-2 text-gray-600">
-                        The short link you're looking for doesn't exist or has been removed.
+                        The short link you&apos;re looking for doesn&apos;t exist or has been removed.
                     </p>
                     <div className="mt-8">
                         <Button variant="outline" asChild>

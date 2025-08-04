@@ -72,8 +72,12 @@ export default function EditLinkModal({ link, isOpen, onClose }: EditLinkModalPr
             await editLink(link._id, data);
             toast.success('Link updated successfully!');
             onClose();
-        } catch (err: any) {
-            toast.error(err.message || "Something went wrong");
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                toast.error(err.message);
+            } else {
+                toast.error("Something went wrong");
+            }
         } finally {
             setIsSubmitting(false);
         }

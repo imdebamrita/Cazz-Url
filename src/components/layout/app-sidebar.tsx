@@ -3,20 +3,14 @@
 import * as React from "react"
 import {
   BookOpen,
-  Bot,
   Command,
-  Frame,
   LifeBuoy,
-  Map,
-  PieChart,
   Send,
   Settings2,
-  SquareTerminal,
   Link2
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/layout/nav-user"
 import {
@@ -28,6 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 const data = {
   user: {
@@ -80,7 +75,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               {/* go to home */}
-              <a href="/" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2">
                 <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                   <Command className="size-4" />
                 </div>
@@ -88,7 +83,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <span className="truncate font-medium">Cazz Url</span>
                   <span className="truncate text-xs text-muted-foreground">#life-is-short</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

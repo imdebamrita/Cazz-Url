@@ -1,9 +1,11 @@
 "use server";
 
 import Click from "@/lib/models/Click";
+import { LinkType } from "@/lib/models/Link";
+import { IpData } from "@/lib/types/ipData";
 import { headers } from "next/headers";
 
-export async function recordClick(link: any, ipData: any) {
+export async function recordClick(link: LinkType, ipData: IpData) {
   // Get headers for analytics
   const headersList = await headers();
   const userAgent = headersList.get("user-agent") || "";
@@ -26,10 +28,8 @@ export async function recordClick(link: any, ipData: any) {
       latitude: ipData.latitude || null,
       longitude: ipData.longitude || null,
       timezone: ipData.timezone || "Unknown",
-      isp: ipData.isp || "Unknown",
       org: ipData.org || "Unknown",
-      as: ipData.as || "Unknown",
-      asname: ipData.asname || "Unknown",
+      as: ipData.asn || "Unknown",
       deviceType,
       ipAddress: ipData.ip || "Unknown",
       referer,

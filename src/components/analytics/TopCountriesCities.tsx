@@ -1,7 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Globe } from 'lucide-react';
-import { Separator } from '../ui/separator';
 import { MySeparator } from '../my-ui/my-separator';
 
 export function TopCountriesCities({ topCountries, topCities, topRegions, totalClicks }: {
