@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { toast } from "sonner"
 import { createLink } from '@/lib/actions/link/create'
-import { checkExistingLink } from '@/lib/actions/checkExistingLink';
+import { checkExistingLink } from '@/lib/actions/link/checkExisting';
 
 const formSchema = z.object({
     originalUrl: z.string().url({ message: 'Enter a valid URL' }),
