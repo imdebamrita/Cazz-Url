@@ -27,8 +27,8 @@ export async function editLink(
     };
   } catch (error) {
     if (error instanceof Error) {
-      throw new Error(`Failed to delete link: ${error.message}`);
+      throw new Error(`Failed to edit link: ${error.message}`);
     }
-    throw new Error("Failed to delete link: Unknown error");
+    throw new Error("Failed to edit link: Unknown error");
   }
 }
