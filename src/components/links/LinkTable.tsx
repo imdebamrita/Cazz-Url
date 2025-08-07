@@ -64,7 +64,7 @@ const LinkTable = () => {
 
     return (
         <>
-            <ScrollArea className="h-[calc(60vh)] md:h-[calc(58vh)] pr-2 pb-2">
+            <ScrollArea className="h-[calc(60vh)] md:h-[calc(72vh)] pr-2 pb-2">
                 <Table>
                     <TableCaption>A list of your shortened links and their stats.</TableCaption>
                     <TableHeader>

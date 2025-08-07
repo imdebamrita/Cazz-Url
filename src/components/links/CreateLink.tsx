@@ -56,10 +56,7 @@ export default function CreateLink() {
     }
 
     return (
-        <Card className="w-full max-w-xl mx-auto mt-10 bg-card/90 border border-border shadow-2xl rounded-2xl">
-            <CardHeader className="pb-2">
-                <CardTitle className="text-2xl font-semibold">Create Link</CardTitle>
-            </CardHeader>
+        <Card className="w-full max-w-xl mx-auto bg-card/90 border border-border shadow-2xl rounded-2xl">
             <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6" autoComplete="off">
                     {/* Destination */}
@@ -110,13 +107,13 @@ export default function CreateLink() {
                         )}
                     </div>
 
-                    <div className="flex flex-row gap-4 justify-end mt-4">
+                    <div className="flex flex-row gap-4 justify-end">
                         <Button
                             type="submit"
                             className="px-8 py-3 font-semibold rounded-lg shadow-lg"
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? 'Shortening...' : 'Shorten My Link ↗'}
+                            {isSubmitting ? 'Creating...' : 'Create Link'}
                         </Button>
                     </div>
                 </form>
