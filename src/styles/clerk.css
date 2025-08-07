@@ -1,0 +1,58 @@
+/* Auth Pages Styling */
+.cl-rootBox {
+  width: 100%;
+}
+
+.cl-card {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: none;
+}
+
+.cl-headerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cl-headerSubtitle {
+  color: hsl(var(--muted-foreground));
+}
+
+.cl-socialButtonsProviderIcon {
+  filter: brightness(1) contrast(1);
+}
+
+.cl-formButtonPrimary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.cl-formButtonPrimary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.cl-footerActionLink {
+  color: hsl(var(--primary));
+}
+
+.cl-footerActionLink:hover {
+  color: hsl(var(--primary) / 0.8);
+}
+
+.cl-formFieldInput {
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.cl-formFieldInput:focus {
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+.cl-formFieldLabel {
+  color: hsl(var(--foreground));
+  font-weight: 500;
+}
