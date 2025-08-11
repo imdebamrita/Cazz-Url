@@ -9,9 +9,14 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      signInUrl="/sign-in"
+      signUpUrl="/sign-up"
+    // afterSignInUrl="/dashboard"
+    // afterSignUpUrl="/dashboard"
+    >
       <html lang="en" className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
-        {/* <html lang="en" suppressHydrationWarning> */}
         <body cz-shortcut-listen="true">
           <ThemeProvider
             attribute="class"
