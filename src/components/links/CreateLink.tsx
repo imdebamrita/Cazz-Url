@@ -98,7 +98,7 @@ export default function CreateLink() {
                         </div>
                         <Input
                             id="shortUrl"
-                            placeholder="your-custom-short-url or Generate a random one"
+                            placeholder="custom-url or Generate a random one"
                             {...register('shortUrl')}
                             aria-invalid={!!errors.shortUrl}
                         />

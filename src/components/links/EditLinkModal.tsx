@@ -117,7 +117,7 @@ export default function EditLinkModal({ link, isOpen, onClose }: EditLinkModalPr
                         <DialogClose asChild>
                             <Button type="button" variant="secondary">Cancel</Button>
                         </DialogClose>
-                        <Button type="submit" disabled={isSubmitting}>
+                        <Button type="submit" disabled={isSubmitting} className='mb-2 md:mb-0'>
                             {isSubmitting ? 'Saving...' : 'Save Changes'}
                         </Button>
                     </DialogFooter>
