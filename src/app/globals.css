@@ -147,4 +147,26 @@
   .dark html {
     color-scheme: dark;
   }
+
+  /* Light theme selection */
+  ::selection {
+    background-color: oklch(0.15 0 0); /* Dark background */
+    color: oklch(0.98 0 0); /* Light text */
+  }
+
+  ::-moz-selection {
+    background-color: oklch(0.15 0 0);
+    color: oklch(0.98 0 0);
+  }
+
+  /* Dark theme selection */
+  .dark ::selection {
+    background-color: oklch(0.95 0 0); /* Light background */
+    color: oklch(0.04 0 0); /* Dark text */
+  }
+
+  .dark ::-moz-selection {
+    background-color: oklch(0.95 0 0);
+    color: oklch(0.04 0 0);
+  }
 }
