@@ -2,7 +2,7 @@ import React from 'react'
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, Globe, Link as LinkIcon, Mouse, Shield, Zap } from 'lucide-react';
+import { BarChart3, Link as LinkIcon, Mouse } from 'lucide-react';
 import Link from 'next/link';
 import { FeaturesSection } from '@/components/landing/FeaturesSection';
 import RealStatsSection from '@/components/landing/RealStatsSection';

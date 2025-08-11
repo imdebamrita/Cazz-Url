@@ -4,14 +4,11 @@ import * as React from "react"
 import {
   BookOpen,
   Command,
-  LifeBuoy,
-  Send,
-  Settings2,
   Link2
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
+// import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/layout/nav-user"
 import {
   Sidebar,

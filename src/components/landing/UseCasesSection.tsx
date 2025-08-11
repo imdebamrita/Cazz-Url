@@ -30,7 +30,7 @@ export function UseCasesSection() {
                         Perfect for every scenario
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Whether you're running marketing campaigns or sharing content, our platform adapts to your needs.
+                        Whether you&apos;re running marketing campaigns or sharing content, our platform adapts to your needs.
                     </p>
                 </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import mermaid from 'mermaid';
+import type { RenderResult } from 'mermaid';
 
 interface MermaidDiagramProps {
     chart: string;
@@ -9,7 +10,7 @@ interface MermaidDiagramProps {
     scale?: number;
 }
 
-export default function MermaidDiagram({ chart, id, scale = 0.8 }: MermaidDiagramProps) {
+export default function MermaidDiagram({ chart, id, scale = 1.0 }: MermaidDiagramProps) {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -49,7 +50,7 @@ export default function MermaidDiagram({ chart, id, scale = 0.8 }: MermaidDiagra
                 }
             });
 
-            mermaid.render(id, chart).then((result: any) => {
+            mermaid.render(id, chart).then((result: RenderResult) => {
                 if (ref.current && result.svg) {
                     ref.current.innerHTML = result.svg;
                 }
@@ -61,7 +62,7 @@ export default function MermaidDiagram({ chart, id, scale = 0.8 }: MermaidDiagra
         <div
             ref={ref}
             className="mermaid-container w-xs md:w-lg overflow-x-auto"
-            style={{ transformOrigin: 'top left' }}
+            style={{ transform: `scale(${scale})`, transformOrigin: 'top left' }}
         />
     );
 }

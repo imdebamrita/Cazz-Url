@@ -1,7 +1,4 @@
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-// import { BarChart3, Users, Clock, Smartphone, Share2, TrendingUp } from 'lucide-react';
-import { BarChart3, Globe, Link as LinkIcon, Mouse, Shield, Zap } from 'lucide-react';
+import { BarChart3, Globe, Link as LinkIcon, Zap } from 'lucide-react';
 
 
 const features = [
