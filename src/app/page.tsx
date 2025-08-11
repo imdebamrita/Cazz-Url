@@ -13,6 +13,7 @@ export default function LandingPage() {
             <Hero />
             <UseCasesSection />
             <AnalyticsPreviewSection />
+            <SystemDesignSection />
             <CTASection />
             <Footer />
         </>
