@@ -3,7 +3,7 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { connectDB } from "@/lib/db";
 import Link from "@/lib/models/Link";
-import GetUniqueShortUrl from "@/utils/GetUniqueShortUrl";
+import GetUniqueShortUrl from "@/lib/utils/GetUniqueShortUrl";
 
 export async function createLink(data: {
   originalUrl: string;
