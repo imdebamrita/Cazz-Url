@@ -9,20 +9,20 @@ import RealStatsSection from '@/components/landing/RealStatsSection';
 
 const Hero = () => {
     return (
-        <div className="min-h-screen w-full flex flex-col justify-center bg-background relative overflow-hidden pt-22">
+        <div className="min-h-screen w-full flex flex-col justify-center bg-background relative overflow-hidden pt-26">
             <Spotlight />
             <div className="p-4 max-w-7xl mx-auto relative z-10 w-full">
                 {/* Main Hero Content */}
-                <div className="text-center mb-16">
-                    <Badge variant="secondary" className="mb-6">
+                <div className="text-center mb-18">
+                    <Badge variant="secondary" className="mb-8">
                         ✨ The Modern URL Shortener
                     </Badge>
 
-                    <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground mb-6">
+                    <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground mb-8">
                         Cazz URL
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
                         Transform long URLs into powerful short links with comprehensive analytics.
                         Track clicks, analyze traffic, and optimize your digital presence with ease.
                     </p>
@@ -68,7 +68,7 @@ const Hero = () => {
                 <RealStatsSection />
 
                 {/* Bottom CTA */}
-                <div className="text-center mt-16">
+                <div className="text-center mt-12">
                     <p className="text-muted-foreground mb-4">
                         Ready to transform your links?
                     </p>

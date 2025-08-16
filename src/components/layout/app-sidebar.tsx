@@ -3,7 +3,6 @@
 import * as React from "react"
 import {
   BookOpen,
-  Command,
   Link2
 } from "lucide-react"
 
@@ -20,6 +19,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
+import Image from "next/image"
 
 const data = {
   user: {
@@ -74,11 +74,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {/* go to home */}
               <Link href="/" className="flex items-center gap-2">
                 <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Command className="size-4" />
+                  <Image src="/favicon.svg" alt="Cazz URL" width={500} height={500} className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-base leading-tight">
                   <span className="truncate font-medium">Cazz Url</span>
-                  {/* <span className="truncate text-xs text-muted-foreground">#life-is-short</span> */}
+                  <span className="truncate text-xs text-muted-foreground">Shorten • Track • Grow</span>
                 </div>
               </Link>
             </SidebarMenuButton>

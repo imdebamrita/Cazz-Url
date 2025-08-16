@@ -6,7 +6,7 @@ export default async function RealStatsSection() {
     const stats = await getGlobalStats();
 
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16 pt-16 border-t border-border">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-18 pt-12 border-t border-border">
             <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                     {formatStatNumber(stats.totalLinks)}

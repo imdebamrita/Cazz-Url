@@ -5,22 +5,22 @@ const features = [
     {
         icon: LinkIcon,
         title: "URL Shortening",
-        description: "Create short, memorable links instantly"
+        description: "Create short, memorable links instantly for teams"
     },
     {
         icon: BarChart3,
         title: "Advanced Analytics",
-        description: "Track clicks, devices, and user behavior"
+        description: "Track clicks, devices, and user behavior at scale"
     },
     {
         icon: Globe,
         title: "Global Tracking",
-        description: "Monitor worldwide click locations"
+        description: "Monitor worldwide click locations with precision"
     },
     {
         icon: Zap,
         title: "Fast & Reliable",
-        description: "Lightning-fast redirects and uptime"
+        description: "Lightning-fast redirects and uptime you trust"
     }
 ];
 
