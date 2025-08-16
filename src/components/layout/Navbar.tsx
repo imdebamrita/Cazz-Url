@@ -11,7 +11,7 @@ export const NavBar = () => {
         <nav className="w-full px-4 py-2 absolute z-10 flex items-center justify-between text-foreground">
             <Link href="/" className="flex items-center gap-2">
                 <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                    <Image src="/favicon.svg" alt="Cazz URL" width={500} height={500} className="size-4" />
+                    <Image src="/favicon.svg" alt="logo" width={500} height={500} className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-base leading-tight">
                     <span className="truncate font-medium">Cazz Url</span>

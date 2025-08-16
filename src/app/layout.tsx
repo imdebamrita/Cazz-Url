@@ -32,10 +32,6 @@ export const metadata: Metadata = {
   publisher: 'Cazz URL',
   category: 'technology',
   referrer: 'origin-when-cross-origin',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#0a0a0a' },
-    { media: '(prefers-color-scheme: dark)', color: '#fafafa' },
-  ],
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
