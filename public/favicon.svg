@@ -1,0 +1,25 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="82 34 104 100" width="64" height="64" role="img" aria-label="Cazz URL favicon" shape-rendering="geometricPrecision" preserveAspectRatio="xMidYMid meet">
+  <title>Cazz URL</title>
+  <desc>Compact monogram with chain C and up-right arrow to match the main logo.</desc>
+
+  <defs>
+    <!-- Subtle blue gradient for the arrow for a modern, premium feel -->
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000ff"/>
+      <stop offset="55%" stop-color="#424242ff"/>
+      <stop offset="100%" stop-color="#000000ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram at left -->
+  <g transform="translate(36,4)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- C-shaped chain link: thicker, balanced, readable at small sizes -->
+  <path d="M96,36a44,44 0 1 0 0,88" stroke="url(#grad-blue)" stroke-width="12"/>
+    <!-- Up-right growth arrow that nests into the C -->
+    <path d="M96,88 L144,40" stroke="url(#grad-blue)" stroke-width="12"/>
+    <!-- Arrow head -->
+    <path d="M144,40 v28 m0-28 h-28" stroke="url(#grad-blue)" stroke-width="12"/>
+  </g>
+</svg>

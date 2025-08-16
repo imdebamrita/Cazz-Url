@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+  <title id="title">Cazz URL — Shorten links with rich analytics</title>
+  <desc id="desc">Wordmark with a chain C and up-right analytics arrow symbolizing shortening, tracking and growth.</desc>
+
+  <defs>
+    <!-- Subtle blue gradient for the arrow for a modern, premium feel -->
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a4a4aff"/>
+      <stop offset="100%" stop-color="#bbbbbbff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram at left -->
+  <g transform="translate(36,4)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- C-shaped chain link: thicker, balanced, readable at small sizes -->
+  <path d="M96,36a44,44 0 1 0 0,88" stroke="url(#grad-blue)" stroke-width="12"/>
+    <!-- Up-right growth arrow that nests into the C -->
+    <path d="M96,88 L144,40" stroke="url(#grad-blue)" stroke-width="12"/>
+    <!-- Arrow head -->
+    <path d="M144,40 v28 m0-28 h-28" stroke="url(#grad-blue)" stroke-width="12"/>
+  </g>
+
+  <!-- Wordmark text -->
+  <g fill="#E5E7EB">
+    <!-- Use Geist first to match app typography, fallback to system sans -->
+    <text x="220" y="74" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="44" font-weight="700" letter-spacing="0.2px">Cazz URL</text>
+    <text x="220" y="120" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" font-weight="500" fill="#94A3B8">Shorten • Track • Grow</text>
+  </g>
+</svg>
