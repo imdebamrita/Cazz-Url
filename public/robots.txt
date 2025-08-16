@@ -1,0 +1,11 @@
+# robots.txt for Cazz URL
+# Allow search engines to crawl public pages, but block private/auth areas.
+
+User-agent: *
+Allow: /
+
+# Private and auth pages
+Disallow: /dashboard/
+Disallow: /dashboard/create-link/
+Disallow: /sign-in/
+Disallow: /sign-up/
