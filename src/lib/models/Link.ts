@@ -1,12 +1,12 @@
-import mongoose, { InferSchemaType } from "mongoose";
+import mongoose, { InferSchemaType, Types } from "mongoose";
 const { Schema } = mongoose;
 
 const LinkSchema = new Schema(
   {
-    _id: {
-      type: String,
-      default: () => new mongoose.Types.ObjectId().toString(), // Use ObjectId as string
-    },
+    // _id: {
+    //   type: String,
+    //   default: () => new mongoose.Types.ObjectId().toString(), // Use ObjectId as string
+    // },
     userId: {
       type: String, // Store Clerk user ID directly
       required: true,
@@ -34,6 +34,8 @@ const LinkSchema = new Schema(
   }
 );
 
-export type LinkType = InferSchemaType<typeof LinkSchema>;
+export type LinkType = InferSchemaType<typeof LinkSchema> & {
+  _id: Types.ObjectId;
+};
 
 export default mongoose.models.Link || mongoose.model("Link", LinkSchema);

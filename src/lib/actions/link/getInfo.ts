@@ -12,7 +12,7 @@ export async function getInfo(shortCode: string) {
 
   // ✅ Convert to a plain serializable object
   const plainLink: LinkType = {
-    _id: linkDoc._id.toString(),
+    _id: linkDoc._id,
     userId: linkDoc.userId?.toString(),
     originalUrl: linkDoc.originalUrl,
     shortCode: linkDoc.shortCode,
