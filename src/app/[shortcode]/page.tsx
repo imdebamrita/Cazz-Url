@@ -17,7 +17,7 @@ function ensureAbsoluteUrl(url: string): string {
     }
 }
 
-export default async function RedirectPage({ params }: { params: { shortcode: string } }) {
+export default async function RedirectPage({ params }: { params: Promise<{ shortcode: string }> }) {
     const { shortcode } = await params;
 
     const link = await getInfo(shortcode);
