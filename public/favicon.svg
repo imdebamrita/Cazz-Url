@@ -8,7 +8,7 @@
     <!-- Subtle blue gradient for the arrow for a modern, premium feel -->
     <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#000000ff"/>
-      <stop offset="55%" stop-color="#424242ff"/>
+      <stop offset="55%" stop-color="#282828ff"/>
       <stop offset="100%" stop-color="#000000ff"/>
     </linearGradient>
   </defs>

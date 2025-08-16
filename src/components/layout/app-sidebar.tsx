@@ -2,8 +2,8 @@
 
 import * as React from "react"
 import {
-  BookOpen,
-  Link2
+  Link2,
+  ListPlus,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -42,7 +42,7 @@ const data = {
     {
       title: "Create Link",
       url: "/dashboard/create-link",
-      icon: BookOpen,
+      icon: ListPlus,
     },
     // {
     //   title: "Settings",
@@ -73,8 +73,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton size="lg" asChild>
               {/* go to home */}
               <Link href="/" className="flex items-center gap-2">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Image src="/favicon.svg" alt="Cazz URL" width={500} height={500} className="size-4" />
+                <div className="bg-gray-100 flex aspect-square size-8 items-center justify-center rounded-lg shadow-sm">
+                  <Image src="/favicon.svg" alt="logo" width={500} height={500} className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-base leading-tight">
                   <span className="truncate font-medium">Cazz Url</span>
