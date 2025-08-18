@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="./public/favicon.svg" alt="Cazz URL" width="56" height="56" />
+  
+</p>
 
-## Getting Started
+<h1 align="center">Cazz URL — Shorten • Track • Grow</h1>
 
-First, run the development server:
+<p align="center">A modern URL shortener with rich analytics, built with Next.js, MongoDB, and Clerk.</p>
+
+<p align="center">
+	<img src="./public/hero.png" alt="Cazz URL Hero" width="800" />
+</p>
+
+## Overview
+
+Cazz URL lets you create short links and understand your audience with actionable analytics. Auth is handled by Clerk, data is stored in MongoDB via Mongoose, and the app uses the Next.js App Router.
+
+## Features
+
+- Short, memorable links with unique short codes
+- Link management: create, edit, delete, list
+- Analytics per link: clicks over time, device types, referrers, top countries/cities, and user agent summary
+- Server-side redirect for short codes with pre-redirect click logging
+- Protected dashboard for authenticated users
+- Dark/light theme support
+
+All features listed above are present in the codebase (see `src/components/analytics/*`, `src/lib/actions`, and `src/app/(protected)/dashboard`).
+
+## Tech Stack
+
+- Next.js 15 (App Router), React 19, TypeScript
+- Styling: Tailwind CSS 4
+- Auth: Clerk (`@clerk/nextjs`)
+- Database: MongoDB with Mongoose
+- Charts: Recharts
+- Icons/UI: lucide-react and shadcn-style UI primitives in `src/components/ui`
+
+## App Structure (routes)
+
+- `/` — Landing page
+- `/[shortcode]` — Public redirect page for short links
+- `/sign-in`, `/sign-up` — Auth pages (Clerk)
+- `/dashboard` — Protected dashboard (requires auth)
+  - `/dashboard/create-link` — Create a new short link
+  - `/dashboard/[short-url]` — Link details and analytics
+
+Middleware protects `/dashboard` and related routes; public routes include `/`, sign-in/up, and click recording (see `src/middleware.ts`).
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Favicons live in `public/` (`favicon.svg`).
+- Robots are configured in `public/robots.txt`.
+- Mongo connection logs "✅ MongoDB connected" on successful server start.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Issues and PRs are welcome. Please keep changes consistent with the existing stack and patterns (App Router, Tailwind, Clerk, Mongoose).
