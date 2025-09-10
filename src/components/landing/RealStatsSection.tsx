@@ -9,6 +9,12 @@ export default async function RealStatsSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-18 pt-12 border-t border-border">
             <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                    {formatStatNumber(stats.totalUniqueUsers)}
+                </div>
+                <div className="text-sm text-muted-foreground">Unique Users</div>
+            </div>
+            <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                     {formatStatNumber(stats.totalLinks)}
                 </div>
                 <div className="text-sm text-muted-foreground">Links Created</div>
@@ -24,12 +30,6 @@ export default async function RealStatsSection() {
                     {stats.totalCountries}+
                 </div>
                 <div className="text-sm text-muted-foreground">Countries</div>
-            </div>
-            <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                    {stats.uptime}
-                </div>
-                <div className="text-sm text-muted-foreground">Uptime</div>
             </div>
         </div>
     );
