@@ -76,7 +76,7 @@ export function Footer() {
 
                         {/* Artist Signature */}
                         <div className="relative space-y-1">
-                            <div className="text-muted-foreground/60 text-xs italic">
+                            <div className="text-muted-foreground/90 text-xs italic">
                                 ~ Crafted by
                             </div>
                             <div className="text-lg font-bold italic bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-muted-foreground relative">
@@ -84,7 +84,7 @@ export function Footer() {
                                 {/* @imdebamrita */}
                                 <div className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
                             </div>
-                            <div className="text-xs text-muted-foreground/50 italic">
+                            <div className="text-xs text-muted-foreground italic">
                                 Full Stack Developer & AI-ML Dev
                             </div>
                         </div>

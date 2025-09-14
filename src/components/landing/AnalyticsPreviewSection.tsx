@@ -7,7 +7,7 @@ export function AnalyticsPreviewSection() {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <Badge variant="secondary" className="mb-4">Analytics</Badge>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2 h-12 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground">
                         Powerful insights at your fingertips
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
