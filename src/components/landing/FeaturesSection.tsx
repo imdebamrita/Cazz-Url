@@ -20,7 +20,7 @@ const features = [
     {
         icon: Zap,
         title: "Fast & Reliable",
-        description: "Lightning-fast redirects and uptime you trust"
+        description: "Server-side redirection with lightning-fast performance"
     }
 ];
 

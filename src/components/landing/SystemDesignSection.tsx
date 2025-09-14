@@ -24,8 +24,8 @@ export default function SystemDesignSection() {
             API -->|Extract IP| GEO
             GEO -->|Country / City / ISP| API
             API -->|Store click| DB
-            DB -->|Aggregates| ANALYTICS -->|Charts| DASH
-            API -->|301 Redirect| OUT
+            DB -->|Aggregates| ANALYTICS -->|Insights| DASH
+            API -->|Server Side Redirect| OUT
             FE -.->|SSR/CSR| DASH
             DASH -.->|Auth| AUTH
 
@@ -47,7 +47,7 @@ export default function SystemDesignSection() {
         <section className="py-16 px-4 bg-background">
             <div className="flex flex-col items-center max-w-6xl mx-auto">
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2 h-12 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground">
                         How Cazz URL Works
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

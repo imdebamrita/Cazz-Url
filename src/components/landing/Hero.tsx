@@ -14,8 +14,8 @@ const Hero = () => {
             <div className="p-4 max-w-7xl mx-auto relative z-10 w-full">
                 {/* Main Hero Content */}
                 <div className="text-center mb-18">
-                    <Badge variant="secondary" className="mb-8">
-                        ✨ The Modern URL Shortener
+                    <Badge variant="outline" className="mb-8 pb-1">
+                        ✨ Total Server Side Redirection - No Black Screen
                     </Badge>
 
                     <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground mb-8">
