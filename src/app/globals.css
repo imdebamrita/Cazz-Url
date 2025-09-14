@@ -58,7 +58,7 @@
   --secondary: oklch(0.88 0 0); /* Light gray secondary */
   --secondary-foreground: oklch(0.4 0 0); /* Medium gray text */
   --muted: oklch(0.88 0 0); /* Light gray muted */
-  --muted-foreground: oklch(0.5 0 0); /* Medium gray text */
+  --muted-foreground: oklch(37.53% 0.00004 271.152); /* Medium gray text */
   --accent: oklch(0.88 0 0); /* Light gray accent */
   --accent-foreground: oklch(0.4 0 0); /* Medium gray text */
   --destructive: oklch(0.577 0.245 27.325); /* Keep destructive red */
