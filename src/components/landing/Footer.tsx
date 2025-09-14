@@ -20,9 +20,22 @@ export function Footer() {
                     {/* Left side - Brand & tagline */}
                     <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
                         <div>
-                            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-foreground to-muted-foreground">
-                                Cazz URL
-                            </h3>
+                            <a
+                                href="https://github.com/imdebamrita/Cazz-Url"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='group flex items-center gap-3 mb-1'
+                            >
+                                <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-foreground to-muted-foreground">
+                                    Cazz URL
+                                </h3>
+                                <span
+                                    className="group flex items-center gap-2 p-2 rounded-full bg-muted/50 hover:bg-muted transition-all duration-300 hover:scale-105"
+                                >
+                                    <Github className="h-4 w-4 group-hover:animate-spin" />
+                                    {/* <span className="text-xs font-medium">GitHub</span> */}
+                                </span>
+                            </a>
                             <p className="text-sm text-muted-foreground">
                                 Modern URL shortener with powerful analytics
                             </p>
