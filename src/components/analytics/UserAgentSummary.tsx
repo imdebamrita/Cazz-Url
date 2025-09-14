@@ -10,7 +10,7 @@ export function UserAgentSummary({
     userAgents: { name: string; count: number }[];
 }) {
     return (
-        <Card>
+        <Card className='max-w-[calc(100vw-2rem)] lg:max-w-none'>
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="h-5 w-5" />

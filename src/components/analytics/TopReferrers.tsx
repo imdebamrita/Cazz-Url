@@ -3,7 +3,7 @@ import { BarChart3 } from 'lucide-react';
 
 export function TopReferrers({ topReferrers }: { topReferrers: { name: string, count: number }[] }) {
     return (
-        <Card>
+        <Card className='max-w-[calc(100vw-2rem)] lg:max-w-none'>
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="h-5 w-5" />

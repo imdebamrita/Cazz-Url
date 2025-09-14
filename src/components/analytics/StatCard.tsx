@@ -6,7 +6,7 @@ export const StatCard = ({ title, value, icon: Icon, description }: {
     icon: React.ElementType;
     description?: string;
 }) => (
-    <Card>
+    <Card className='max-w-[calc(100vw-2rem)] lg:max-w-none'>
         <CardContent className="p-6">
             <div className="flex items-center justify-between">
                 <div>

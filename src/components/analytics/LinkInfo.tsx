@@ -12,7 +12,7 @@ interface LinkInfoProps {
 
 export function LinkInfo({ originalUrl, shortCode, createdAt, updatedAt, shortUrl }: LinkInfoProps) {
     return (
-        <Card>
+        <Card className='max-w-[calc(100vw-2rem)] lg:max-w-none'>
             <CardContent className="px-6">
                 <div className="grid gap-4 md:grid-cols-4">
                     <div>

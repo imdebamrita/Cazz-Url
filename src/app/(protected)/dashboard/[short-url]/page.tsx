@@ -79,7 +79,7 @@ export default async function AnalyticsPage({ params }: { params: Promise<{ 'sho
     // ...existing code...
 
     return (
-        <ScrollArea className="h-[calc(100vh-6rem)] w-full pr-4">
+        <ScrollArea className="h-[calc(100vh-6rem)] w-full p-0 lg:pr-4">
             <div className='space-y-6'>
                 {/* Header */}
                 <div className="flex items-center justify-between">
@@ -160,7 +160,7 @@ export default async function AnalyticsPage({ params }: { params: Promise<{ 'sho
 
 
                 {/* Clicks Time Series Graph */}
-                <Card>
+                <Card className='max-w-[calc(100vw-2rem)] lg:max-w-none'>
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <BarChart3 className="h-5 w-5" />

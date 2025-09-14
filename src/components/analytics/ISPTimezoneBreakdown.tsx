@@ -9,7 +9,7 @@ export function ISPTimezoneBreakdown({ topISPs, topTimezones, totalClicks }: {
     totalClicks: number
 }) {
     return (
-        <Card>
+        <Card className='max-w-[calc(100vw-2rem)] lg:max-w-none'>
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <Globe className="h-5 w-5" />
@@ -17,7 +17,7 @@ export function ISPTimezoneBreakdown({ topISPs, topTimezones, totalClicks }: {
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="flex space-x-4 items-stretch justify-between">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
                     <div className='w-full'>
                         <h4 className="font-medium mb-2">Top ISPs</h4>
                         <div className="space-y-2">
@@ -32,19 +32,22 @@ export function ISPTimezoneBreakdown({ topISPs, topTimezones, totalClicks }: {
                             ))}
                         </div>
                     </div>
-                    <MySeparator />
-                    <div className='w-full'>
-                        <h4 className="font-medium mb-2">Timezones</h4>
-                        <div className="space-y-2">
-                            {topTimezones.map(tz => (
-                                <div key={tz.name} className="flex items-center justify-between gap-2">
-                                    <span className="">{tz.name}</span>
-                                    <div className='flex items-center gap-2'>
-                                        <Progress value={(tz.count / totalClicks) * 100} className="w-16 h-2" />
-                                        <span>{tz.count}</span>
+                    {/* <MySeparator className='hidden lg:block' /> */}
+                    <div className="w-full flex gap-2 items-start">
+                        <MySeparator className='hidden lg:block' />
+                        <div className='w-full'>
+                            <h4 className="font-medium mb-2">Timezones</h4>
+                            <div className="space-y-2">
+                                {topTimezones.map(tz => (
+                                    <div key={tz.name} className="flex items-center justify-between gap-2">
+                                        <span className="">{tz.name}</span>
+                                        <div className='flex items-center gap-2'>
+                                            <Progress value={(tz.count / totalClicks) * 100} className="w-16 h-2" />
+                                            <span>{tz.count}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
