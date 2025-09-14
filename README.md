@@ -6,6 +6,7 @@
 <h1 align="center">Cazz URL — Shorten • Track • Grow</h1>
 
 <p align="center">A modern URL shortener with rich analytics, built with Next.js, MongoDB, and Clerk.</p>
+<p align="center"><b>No Black Screen - Total Server Side Redirection</b></p>
 
 <p align="center">
 	<img src="./public/hero.png" alt="Cazz URL Hero" width="800" />
